@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Motors</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #contatto{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            border: 2px;
+            border-color: black;
+        }
+
+        input:not(#invia){
+            opacity: 0.6;
+            border-radius: 10px;
+        }
+
+        #invia{
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bs-black">
+            <div class="container-fluid">
+              <a class="navbar-brand">AT Motors</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#social">Contatti</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Cerca</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </header>
+    <div class="container-fluid">
+            <div class="row" id="jumbotron">
+                <div class="col-12">
+                  <div>
+                    <h1>AT MOTORS</h1>
+                    <h2>Valutiamo il tuo usato. Compila i dati qui sotto per essere contattato.</h2>
+                  </div>
+                  <form action="mailto:tuoaindirizzo@email.com" method="post" enctype="text/plain" id="contatto">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome"><br>
+                    <label for="cognome">Cognome:</label><br>
+                    <input type="text" id="cognome" name="cognome"><br>
+                    <label for="cellulare">Cellulare:</label><br>
+                    <input type="tel" id="cellulare" name="cellulare"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <input type="submit" id="invia" value="Invia"><br>
+                  </form>
+                </div>
+            </div>
+        </div>
+    <footer>
+            <div class="row" id="bottom">
+              <ul class="social-links" id="social">
+                <h3>Seguici sui social</h3>
+                <li><a href="https://www.facebook.com/tuaprofilofacebook" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+                <li><a href="https://www.instagram.com/tuoprofiloinstagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@tuoprofilotiktok" target="_blank"><i class="fab fa-tiktok"></i>Tik Tok</a></li>
+              </ul>
+              <p id="diritti">© Tutti i diritti riservati. 2024</p>
+            </div>
+            </footer>
+</body>
+</html>
