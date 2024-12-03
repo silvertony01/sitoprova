@@ -1,4 +1,12 @@
-nav{
+#navbarhome{
+  background-color: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar{
     background-color: white;
 }
 
@@ -8,6 +16,7 @@ body{
 
 #jumbotron .col-12{
     background-image:url('img/fotosfondo.jpg');
+    max-width: 100%;
     height: 550px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,6 +27,7 @@ body{
     color: white;
     font-size: 4rem;
     text-align:center;
+    margin-top: 100px;
 }
 
 #jumbotron h2 {
@@ -27,13 +37,15 @@ body{
 }
 
 #cards {
-    margin: 30px 0px 30px 60px;
+    margin: 30px 30px 30px 30px;
+    max-width: 100%;
 }
 
 .card {
     font-size: 2rem;
     color: black;
     padding: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card img{
@@ -50,9 +62,40 @@ body{
     font-size: 24px;
 }
 
+#mappa{
+    height: 400px;
+    background-image:url('img/mappa.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-visit {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50; /* Verde chiaro */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-visit:hover {
+    background-color: #45a049; /* Verde scuro al passaggio del mouse */
+}
+
 #bottom{
     background-color: black;
-    padding: 80px;
+    margin: 0 auto;
+    padding: 100px;
+    width: 100%;
 }
 
 #social{

@@ -27,6 +27,11 @@
         .card-text{
           padding-bottom: -50px;
         }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -57,7 +62,7 @@
         <h1>Usato</h1>
         <hr style="border: 1px solid black; width: 100%;">
         <div id="annunci">
-          <div class="card" style="width: 18rem; height: 25rem;">
+          <div class="card" style="width: 18rem; height: 25rem;" onclick="apriSchedaProdotto('https://www.alvolante.it/fuori-listino/audi-a5-sportback-serie-1-8ta-2009-2016')">
             <img src="img/audia5.jpeg" class="card-img-top" alt="A5">
             <div class="card-body">
               <p class="card-text" style="font-weight: bold;">Audi A5</p>
@@ -76,5 +81,10 @@
             <p id="diritti">© Tutti i diritti riservati. 2024</p>
           </div>
           </footer>
+      <script>
+            function apriSchedaProdotto(url) {
+                window.open(url, '_blank');
+            }
+      </script>
 </body>
 </html>

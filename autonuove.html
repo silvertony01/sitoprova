@@ -27,6 +27,11 @@
         .card-text{
           padding-bottom: -50px;
         }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -46,7 +51,7 @@
                 <a class="nav-link" href="#social">Contatti</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" action="risultati.html" method="get">
               <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Cerca</button>
             </form>
@@ -57,7 +62,7 @@
     <h1>Nuovo</h1>
     <hr style="border: 1px solid black; width: 100%;">
     <div id="annunci">
-    <div class="card" style="width: 18rem; height: 25rem;">
+    <div class="card" style="width: 18rem; height: 25rem;" onclick="apriSchedaProdotto('https://www.alvolante.it/listino_auto/land_rover-range_rover_evoque');">
       <img src="img/evoque.jpg" class="card-img-top" alt="Evoque">
       <div class="card-body">
         <p class="card-text" style="font-weight: bold;">Land Rover Range Rover Evoque</p>
@@ -76,5 +81,10 @@
         <p id="diritti">© Tutti i diritti riservati. 2024</p>
       </div>
       </footer>
+    <script>
+        function apriSchedaProdotto(url) {
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 </html>
