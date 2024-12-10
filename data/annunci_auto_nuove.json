@@ -1,0 +1,49 @@
+{
+    "annunci": [
+      {
+        "id": 1,
+        "immagini": [
+          "img/evoque.jpg"
+        ],
+        "marca": "Land Rover",
+        "modello": "Range Rover Evoque",
+        "anno": 2015,
+        "chilometraggio": 0,
+        "prezzo": 55000,
+        "carburante": "Diesel",
+        "trasmissione": "Automatica",
+        "descrizione": " ",
+        "disponibilità": "In vendita"
+      },
+      {
+        "id": 2,
+        "immagini": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzq2BBrBz2AJFbjpTbbJUSzVXwcCJxe_glkw&s"
+        ],
+        "marca": "Volkswagen",
+        "modello": "Golf GTI",
+        "anno": 2024,
+        "chilometraggio": 0,
+        "prezzo": 47000,
+        "carburante": "Benzina",
+        "trasmissione": "Automatica",
+        "descrizione": " ",
+        "disponibilità": "In vendita"
+      },
+      {
+        "id": 3,
+        "immagini": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtdA2EA0C5b5FGX9cSmdS4zb-XTwmLu0vEIw&s"
+        ],
+        "marca": "Volkswagen",
+        "modello": "Passat",
+        "anno": 2024,
+        "chilometraggio": 0,
+        "prezzo": 45000,
+        "carburante": "Diesel",
+        "trasmissione": "Automatica",
+        "descrizione": " ",
+        "disponibilità": "In vendita"
+      }
+    ]
+}
