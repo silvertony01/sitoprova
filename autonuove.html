@@ -19,19 +19,43 @@
             text-align: center;
         }
 
-        #annunci{
-          margin-left: 20px;
-          margin-bottom: 20px;
-        }
+        .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      padding: 16px;
+   }
 
-        .card-text{
-          padding-bottom: -50px;
-        }
+   .annuncio {
+      flex: 1 1 calc(33.333% - 32px); /* 3 colonne con spazio tra loro */
+      max-width: calc(33.333% - 32px);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 4px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
+    .annuncio img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+    .annuncio {
+    flex: 1 1 calc(50% - 32px); /* 2 colonne */
+    max-width: calc(50% - 32px);
+  }
+}
+
+    @media (max-width: 480px) {
+    .annuncio {
+    flex: 1 1 100%; /* Annunci uno sotto l'altro */
+    max-width: 100%;
+  }
+}
     </style>
 </head>
 <body>
@@ -61,30 +85,62 @@
     </header>
     <h1>Nuovo</h1>
     <hr style="border: 1px solid black; width: 100%;">
-    <div id="annunci">
-    <div class="card" style="width: 18rem; height: 25rem;" onclick="apriSchedaProdotto('https://www.alvolante.it/listino_auto/land_rover-range_rover_evoque');">
-      <img src="img/evoque.jpg" class="card-img-top" alt="Evoque">
-      <div class="card-body">
-        <p class="card-text" style="font-weight: bold;">Land Rover Range Rover Evoque</p>
-        <p class="card-text">Chilometri: 0<br>Alimentazione: Diesel<br>Prezzo: 55.000€</p>
-      </div>
+    <div id="annunci-container" class="flexbox">
+    
     </div>
-    </div>
-    <footer>
-      <div class="row" id="bottom">
-        <ul class="social-links" id="social">
+    <footer class="footer">
+      <div class="footer-left">
           <h3>Seguici sui social</h3>
-          <li><a href="https://www.facebook.com/tuaprofilofacebook" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a></li>
-          <li><a href="https://www.instagram.com/tuoprofiloinstagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
-          <li><a href="https://www.tiktok.com/@tuoprofilotiktok" target="_blank"><i class="fab fa-tiktok"></i>Tik Tok</a></li>
-        </ul>
-        <p id="diritti">© Tutti i diritti riservati. 2024</p>
+          <ul class="social-links">
+            <li><a href="https://www.facebook.com/tuaprofilofacebook" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/tuoprofiloinstagram" target="_blank">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@tuoprofilotiktok" target="_blank">Tik Tok</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <h3>I nostri orari</h3>
+          <p>Lun-Ven: 9:30 - 17:30</p>
+          <p>Sabato: 9:00 - 13:00</p>
+          <p>Domenica: Chiuso</p>
+        </div>
       </div>
-      </footer>
-    <script>
-        function apriSchedaProdotto(url) {
-            window.open(url, '_blank');
-        }
-    </script>
+    </footer>
+      <script>
+        // Percorso del file JSON
+const jsonFile = 'data/annunci_auto_nuove.json';
+
+// Contenitore per gli annunci
+const container = document.getElementById('annunci-container');
+
+// Funzione per creare HTML degli annunci
+function creaAnnuncioHTML(annuncio) {
+return `
+<div class="annuncio">
+  <img src="${annuncio.immagini[0]}" alt="Immagine di ${annuncio.marca} ${annuncio.modello}">
+  <h2>${annuncio.marca} ${annuncio.modello} (${annuncio.anno})</h2>
+  <p><strong>Prezzo:</strong> €${annuncio.prezzo}</p>
+  <p><strong>Chilometraggio:</strong> ${annuncio.chilometraggio} km</p>
+  <p><strong>Carburante:</strong> ${annuncio.carburante}</p>
+  <p><strong>Trasmissione:</strong> ${annuncio.trasmissione}</p>
+  <p>${annuncio.descrizione}</p>
+  <p><strong>Stato:</strong> ${annuncio.disponibilità}</p>
+</div>
+`;
+}
+
+// Leggere e visualizzare i dati dal JSON
+fetch(jsonFile)
+.then(response => {
+if (!response.ok) throw new Error('Errore nel caricamento del file JSON.');
+return response.json();
+})
+.then(data => {
+// Itera sugli annunci e crea il contenuto HTML
+data.annunci.forEach(annuncio => {
+  container.innerHTML += creaAnnuncioHTML(annuncio);
+});
+})
+.catch(error => console.error('Errore:', error));
+  </script>
 </body>
 </html>
