@@ -9,24 +9,86 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
 
-        #contatto{
+      body{
+        background-color: gainsboro;
+        background-image: url(img/fotosfondo.jpg);
+        max-width: 100%;
+        height: 550px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+.container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+           }
+        h2 {
             text-align: center;
-            color: black;
-            font-size: 20px;
-            border: 2px;
-            border-color: black;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 14px;
+            color: #555;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+        .info {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
         }
 
-        input:not(#invia){
-            opacity: 0.6;
-            border-radius: 10px;
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px;
+            }
+            .btn-submit {
+                font-size: 18px;
+                padding: 15px;
+            }
         }
 
-        #invia{
-            margin-top: 20px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
@@ -54,29 +116,64 @@
         </div>
       </nav>
     </header>
-    <div class="container-fluid">
-            <div class="row" id="jumbotron">
-                <div class="col-12">
-                  <div>
-                    <h1>AT MOTORS</h1>
-                    <h2>Valutiamo il tuo usato. Compila i dati qui sotto per essere contattato.</h2>
-                  </div>
-                  <form action="mailto:tuoaindirizzo@email.com" method="post" enctype="text/plain" id="contatto">
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome"><br>
-                    <label for="cognome">Cognome:</label><br>
-                    <input type="text" id="cognome" name="cognome"><br>
-                    <label for="cellulare">Cellulare:</label><br>
-                    <input type="tel" id="cellulare" name="cellulare"><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email"><br>
-                    <input type="submit" id="invia" value="Invia"><br>
-                  </form>
+    <div class="container">
+    <h2>Valutazione del Tuo Usato</h2>
+    <form action="submit_form.php" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome e Cognome</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Indirizzo Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Numero di Telefono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+
+        <div class="form-group">
+            <label for="marca">Marca del Veicolo</label>
+            <input type="text" id="marca" name="marca" required>
+        </div>
+
+        <div class="form-group">
+            <label for="modello">Modello del Veicolo</label>
+            <input type="text" id="modello" name="modello" required>
+        </div>
+
+        <div class="form-group">
+            <label for="anno">Anno di Immatricolazione</label>
+            <input type="number" id="anno" name="anno" min="1900" max="2024" required>
+        </div>
+
+        <div class="form-group">
+            <label for="chilometri">Chilometraggio (in km)</label>
+            <input type="number" id="chilometri" name="chilometri" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="prezzo">Prezzo Richiesto (€)</label>
+            <input type="number" id="prezzo" name="prezzo" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="descrizione">Descrizione Aggiuntiva</label>
+            <textarea id="descrizione" name="descrizione"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Invia la Valutazione</button>
+    </form>
+
+    <p class="info">I tuoi dati verranno trattati in conformità con la nostra <a href="#">Privacy Policy</a>.</p>
+</div>
                 </div>
             </div>
         </div>
         <footer>
-          <div class="social-links">
+          <div class="social-links" id="social">
               <a href="https://www.facebook.com" target="_blank">Facebook</a>
               <a href="https://www.instagram.com" target="_blank">Instagram</a>
               <a href="https://www.tiktok.com" target="_blank">TikTok</a>
