@@ -13,7 +13,22 @@
         "carburante": "Diesel",
         "trasmissione": "Automatica",
         "descrizione": "Un SUV elegante e performante, pronto per essere guidato come nuovo! Con un motore potente, design raffinato e tecnologie all'avanguardia, questa auto è perfetta per chi cerca stile e comfort senza compromessi. Approfitta di un'occasione unica con un prezzo vantaggioso e condizioni immacolate. Non lasciartela scappare! ",
-        "disponibilità": "In vendita"
+        "disponibilità": "In vendita",
+        "caratteristiche":  [
+                    "Navigatore satellitare", "Sensori di parcheggio anteriori e posteriori",
+                    "Clima automatico bi-zona", "Cerchi in lega da 18''",
+                    "Fari full LED", "Sedili sportivi in pelle/tessuto",
+                    "Volante multifunzione in pelle", "Cruise control adattivo",
+                    "Sistema di infotainment con Apple CarPlay e Android Auto", "Bluetooth"
+    ],
+        "specifiche":  {
+                  "Motore": "2.0 D",
+                  "Potenza": "150 CV",
+                  "Porte": "5",
+                  "Colore": "Grigio Metallizzato",
+                  "Interni": "Nero",
+                  "Classe Emissioni": "Euro 6D"
+              }
       },
       {
         "id": 2,
@@ -28,7 +43,22 @@
         "carburante": "Benzina",
         "trasmissione": "Automatica",
         "descrizione": "Sportività e tecnologia in un design iconico. Con motore potente e reattivo, sospensioni sportive e interni moderni, questa hatchback è perfetta per chi cerca emozioni di guida uniche e stile senza compromessi. Approfitta di un'occasione imperdibile con un’auto in condizioni pari al nuovo, pronta per essere vissuta. Non lasciarti scappare questa Golf 8 GTI! ",
-        "disponibilità": "In vendita"
+        "disponibilità": "In arrivo",
+        "caratteristiche":  [
+                    "Navigatore satellitare", "Sensori di parcheggio anteriori e posteriori",
+                    "Clima automatico bi-zona", "Cerchi in lega da 18''",
+                    "Fari full LED", "Sedili sportivi in pelle/tessuto",
+                    "Volante multifunzione in pelle", "Cruise control adattivo",
+                    "Sistema di infotainment con Apple CarPlay e Android Auto", "Bluetooth"
+    ],
+        "specifiche":  {
+                  "Motore": "2.0 TSI",
+                  "Potenza": "245 CV",
+                  "Porte": "5",
+                  "Colore": "Nero",
+                  "Interni": "Nero",
+                  "Classe Emissioni": "Euro 6D TEMP"
+              }
       },
       {
         "id": 3,
@@ -43,7 +73,22 @@
         "carburante": "Diesel",
         "trasmissione": "Automatica",
         "descrizione": "Un’auto versatile e spaziosa, perfetta per chi cerca comfort, praticità e stile. Con ampio spazio interno e un design elegante, questa station wagon è ideale per famiglie e viaggi lunghi. Equipaggiata con motori efficienti e tecnologie moderne, offre un’esperienza di guida sicura e confortevole. Approfitta di un’occasione unica con un’auto pari al nuovo! ",
-        "disponibilità": "In vendita"
+        "disponibilità": "In vendita",
+        "caratteristiche":  [
+                    "Navigatore satellitare", "Sensori di parcheggio anteriori e posteriori",
+                    "Clima automatico bi-zona", "Cerchi in lega da 18''",
+                    "Fari full LED", "Sedili sportivi in pelle/tessuto",
+                    "Volante multifunzione in pelle", "Cruise control adattivo",
+                    "Sistema di infotainment con Apple CarPlay e Android Auto", "Bluetooth"
+    ],
+        "specifiche":  {
+                  "Motore": "2.0 TDI",
+                  "Potenza": "150 CV",
+                  "Porte": "5",
+                  "Colore": "Nero",
+                  "Interni": "Grigio metalizzato",
+                  "Classe Emissioni": "Euro 6"
+              }
       }
     ]
 }

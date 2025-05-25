@@ -119,7 +119,7 @@
         </footer>>
 
   <script>
-            // Percorso del file JSON
+        // Percorso del file JSON
 const jsonFile = 'data/annunci_auto_usate.json';
 
 // Contenitore per gli annunci
@@ -128,7 +128,7 @@ const container = document.getElementById('annunci-container');
 // Funzione per creare HTML degli annunci
 function creaAnnuncioHTML(annuncio) {
   return `
-    <div class="annuncio">
+    div class="annuncio">
       <img src="${annuncio.immagini[0]}" alt="Immagine di ${annuncio.marca} ${annuncio.modello}">
       <h2>${annuncio.marca} ${annuncio.modello} (${annuncio.anno})</h2>
       <p><strong>Prezzo:</strong> €${annuncio.prezzo}</p>
@@ -152,17 +152,18 @@ fetch('data/annunci_auto_usate.json')
           <img src="${annuncio.immagini[0]}" alt="Immagine di ${annuncio.marca} ${annuncio.modello}" style="width:100%; height:230px; border-radius:8px;">
           <h4>${annuncio.marca} ${annuncio.modello} (${annuncio.anno})</h4>
           <p><strong>Prezzo:</strong> €${annuncio.prezzo}</p>
-          <p><strong>Chilometri:</strong> ${annuncio.chilometraggio}</p>
+          <p><strong>Stato:</strong> ${annuncio.disponibilità}</p>
         </div>
       `;
     });
   })
   .catch(error => console.error('Errore:', error));
 
-  // Funzione per reindirizzare alla pagina dei dettagli
+// Funzione per reindirizzare alla pagina dei dettagli
 function apriDettagli(id) {
   window.location.href = `dettagli_usato.html?id=${id}`;
 }
-      </script>
+
+  </script>
 </body>
 </html>

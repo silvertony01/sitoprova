@@ -27,61 +27,156 @@
         img{
             width: 100%;
             border-radius: 8px;
+            margin-bottom: 20px; /* Spazio sotto l'immagine */
         }
 
         h1{
             font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         p{
             margin: 10px 0;
         }
+
+        /* Stili per il contenuto delle schede */
+        .tab-content {
+            padding: 20px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 30px; /* Spazio tra righe e colonne */
+            align-items: center; /* Allinea gli elementi verticalmente */
+        }
+
+        .features-grid p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .features-grid i {
+            margin-right: 10px;
+            color: #28a745; /* Spunta verde */
+            font-size: 1.1rem;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .spec-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .spec-item strong {
+            display: block;
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 3px;
+        }
+
+        .spec-item span {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #343a40;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bs-black">
-          <div class="container-fluid">
-            <a class="navbar-brand">AT Motors</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#social">Contatti</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Menù
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="autonuove.html">Nuovo</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="valutiamousato.html">Valutiamo il tuo usato</a></li>
-                  </ul>
-                </li>
+  <header>
+    <nav class="navbar navbar-expand-lg bs-black">
+      <div class="container-fluid">
+        <a class="navbar-brand">AT Motors</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#social">Contatti</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menù
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="autonuove.html">Nuovo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="valutiamousato.html">Valutiamo il tuo usato</a></li>
               </ul>
-              <form id="search-form" class="d-flex" role="search" action="risultati.html" method="get">
-                <input class="form-control me-2" id="searchinput" type="search" placeholder="Cerca" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit" id="cerca">Cerca</button>
-              </form>
-            </div>
-          </nav>
-        </header>
+            </li>
+          </ul>
+          <form id="search-form" class="d-flex" role="search" action="risultati.html" method="get">
+            <input class="form-control me-2" id="searchinput" type="search" placeholder="Cerca" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="cerca">Cerca</button>
+          </form>
+        </div>
+      </nav>
+    </header>
     <div class="container">
         <img id="immagine" alt="Immagine Auto">
         <h1 id="titolo"></h1>
-        <p><strong>Prezzo:</strong> €<span id="prezzo"></span></p>
-        <p><strong>Anno:</strong> <span id="anno"></span></p>
-        <p><strong>Chilometraggio:</strong> <span id="chilometraggio"></span> km</p>
-        <p><strong>Carburante:</strong> <span id="carburante"></span></p>
-        <p><strong>Trasmissione:</strong> <span id="trasmissione"></span></p>
-        <p id="descrizione"></p>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="true">Dettagli</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features" type="button" role="tab" aria-controls="features" aria-selected="false">Caratteristiche</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab" aria-controls="specs" aria-selected="false">Specifiche</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+                <p id="descrizione"></p>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong>Anno</strong>
+                        <span id="anno"></span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Chilometri</strong>
+                        <span id="chilometraggio"></span> km
+                    </div>
+                    <div class="spec-item">
+                        <strong>Carburante</strong>
+                        <span id="carburante"></span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Cambio</strong>
+                        <span id="trasmissione"></span>
+                    </div>
+                </div>
+                <p><strong>Prezzo:</strong> €<span id="prezzo"></span></p>
+            </div>
+            <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
+                <div class="features-grid" id="features-list">
+                    </div>
+            </div>
+            <div class="tab-pane fade" id="specs" role="tabpanel" aria-labelledby="specs-tab">
+                <div class="specs-grid" id="specs-list">
+                    </div>
+            </div>
+          </div>
       </div>
+
       <footer>
         <div class="social-links" id="social">
             <a href="https://www.facebook.com" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
@@ -120,6 +215,28 @@
               document.getElementById('carburante').textContent = annuncio.carburante;
               document.getElementById('trasmissione').textContent = annuncio.trasmissione;
               document.getElementById('descrizione').textContent = annuncio.descrizione;
+
+              //caratteristiche
+              const featuresList = document.getElementById('features-list');
+              const features = annuncio.caratteristiche;
+              features.forEach(feature => {
+                  featuresList.innerHTML += `<p><i class="fas fa-check-circle"></i>${feature}</p>`;
+              });
+
+              // specifiche
+              const specsList = document.getElementById('specs-list');
+              const specs = annuncio.specifiche;
+
+              for (const [key, value] of Object.entries(specs)) {
+                specsList.innerHTML += `
+                    <div class="spec-item">
+                        <strong>${key}</strong>
+                        <span>${value}</span>
+                    </div>
+                `;
+              }
+
+
             } else {
               document.querySelector('.container').innerHTML = '<p>Annuncio non trovato.</p>';
             }

@@ -13,7 +13,22 @@
         "carburante": "Benzina",
         "trasmissione": "Manuale",
         "descrizione": " La city car iconica che unisce stile, compattezza e divertimento alla guida. Con il suo design inconfondibile, è perfetta per muoversi agilmente in città senza rinunciare a comfort e praticità. In ottime condizioni e con chilometraggio contenuto, questa Fiat 500 è l'auto ideale per chi cerca un'auto economica e dal carattere unico. Non perdere questa occasione!",
-        "disponibilità": "In vendita"
+        "disponibilità": "In vendita",
+        "caratteristiche":  [
+                    "Navigatore satellitare", "Sensori di parcheggio anteriori e posteriori",
+                    "Clima automatico bi-zona", "Cerchi in lega da 18''",
+                    "Fari full LED", "Sedili sportivi in pelle/tessuto",
+                    "Volante multifunzione in pelle", "Cruise control adattivo",
+                    "Sistema di infotainment con Apple CarPlay e Android Auto", "Bluetooth"
+    ],
+        "specifiche":  {
+                  "Motore": "1.2",
+                  "Potenza": "70",
+                  "Porte": "5",
+                  "Colore": "Celeste",
+                  "Interni": "Nero",
+                  "Classe Emissioni": "Euro 6"
+              }
       },
       {
         "id": 2,
@@ -28,7 +43,22 @@
         "carburante": "Diesel",
         "trasmissione": "Automatica",
         "descrizione": "Un SUV che combina prestazioni sportive, comfort e design elegante. Con motori potenti e una guida dinamica, questa X3 è perfetta per chi cerca un’auto versatile, adatta sia per la città che per lunghi viaggi. Ben mantenuta, con un ottimo rapporto qualità-prezzo, è l'occasione ideale per entrare nel mondo BMW. Non lasciartela scappare!",
-        "disponibilità": "In vendita"
+        "disponibilità": "In vendita",
+        "caratteristiche":  [
+                    "Navigatore satellitare", "Sensori di parcheggio anteriori e posteriori",
+                    "Clima automatico bi-zona", "Cerchi in lega da 18''",
+                    "Fari full LED", "Sedili sportivi in pelle/tessuto",
+                    "Volante multifunzione in pelle", "Cruise control adattivo",
+                    "Sistema di infotainment con Apple CarPlay e Android Auto", "Bluetooth"
+    ],
+        "specifiche":  {
+                  "Motore": "2.0",
+                  "Potenza": "190 CV",
+                  "Porte": "5",
+                  "Colore": "Blu",
+                  "Interni": "Nero",
+                  "Classe Emissioni": "Euro 6D TEMP"
+              }
       },
       {
         "id": 3,
@@ -43,7 +73,22 @@
         "carburante": "Ibrida",
         "trasmissione": "Automatica",
         "descrizione": "Una city car affidabile ed economica, perfetta per la vita quotidiana. Con consumi ridotti, maneggevolezza e un design compatto, la Yaris è ideale per chi cerca un'auto pratica e versatile. Ben tenuta e con un ottimo rapporto qualità-prezzo, è la scelta perfetta per chi vuole un'auto che unisce efficienza e comfort. Non perdere questa occasione!",
-        "disponibilità": "Venduto"
+        "disponibilità": "Venduto",
+        "caratteristiche":  [
+                    "Navigatore satellitare", "Sensori di parcheggio anteriori e posteriori",
+                    "Clima automatico bi-zona", "Cerchi in lega da 18''",
+                    "Fari full LED", "Sedili sportivi in pelle/tessuto",
+                    "Volante multifunzione in pelle", "Cruise control adattivo",
+                    "Sistema di infotainment con Apple CarPlay e Android Auto", "Bluetooth"
+    ],
+        "specifiche":  {
+                  "Motore": "1.5 Hubrid",
+                  "Potenza": "116 CV",
+                  "Porte": "5",
+                  "Colore": "Rosso",
+                  "Interni": "Nero",
+                  "Classe Emissioni": "Euro 6D TEMP"
+              }
       },
       {
         "id": 4,
@@ -58,7 +103,22 @@
         "carburante": "Diesel",
         "trasmissione": "Automatica",
         "descrizione": "Un'auto elegante, spaziosa e perfetta per chi cerca un mix di comfort, prestazioni e praticità. Con un design sofisticato, interni di alta qualità e una guida dinamica, questa A4 è ideale per viaggi lunghi e per la famiglia. Ben mantenuta e con un’ottima efficienza, è un’occasione imperdibile per entrare nel mondo Audi. Non lasciarti scappare questa opportunità!",
-        "disponibilità": "In vendita"
+        "disponibilità": "In vendita",
+        "caratteristiche":  [
+                    "Navigatore satellitare", "Sensori di parcheggio anteriori e posteriori",
+                    "Clima automatico bi-zona", "Cerchi in lega da 18''",
+                    "Fari full LED", "Sedili sportivi in pelle/tessuto",
+                    "Volante multifunzione in pelle", "Cruise control adattivo",
+                    "Sistema di infotainment con Apple CarPlay e Android Auto", "Bluetooth"
+    ],
+        "specifiche":  {
+                  "Motore": "2.0 TDI",
+                  "Potenza": "204 CV",
+                  "Porte": "5",
+                  "Colore": "Grigio",
+                  "Interni": "Nero",
+                  "Classe Emissioni": "Euro 6D"
+              }
       }
     ]
   }
