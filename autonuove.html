@@ -97,7 +97,7 @@
     <h1>Nuovo</h1>
     <hr style="border: 1px solid black; width: 100%;">
     <div id="annunci-container" class="flexbox">
-    
+
     </div>
     <footer>
       <div class="social-links" id="social">
@@ -149,7 +149,7 @@ fetch('data/annunci_auto_nuove.json')
       container.innerHTML += `
         <div class="annuncio" onclick="apriDettagli(${annuncio.id})" style="cursor: pointer;">
           <img src="${annuncio.immagini[0]}" alt="Immagine di ${annuncio.marca} ${annuncio.modello}" style="width:100%; height:230px; border-radius:8px;">
-          <h2>${annuncio.marca} ${annuncio.modello} (${annuncio.anno})</h2>
+          <h4>${annuncio.marca} ${annuncio.modello} (${annuncio.anno})</h4>
           <p><strong>Prezzo:</strong> €${annuncio.prezzo}</p>
         </div>
       `;
