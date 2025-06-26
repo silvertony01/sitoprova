@@ -31,5 +31,4 @@ document.addEventListener('DOMContentLoaded', function(){
     function apriSchedaProdotto(url) {
         window.open(url, '_blank');
     };
-    
 });

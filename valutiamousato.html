@@ -129,7 +129,7 @@
     </header>
     <div class="container">
     <h2>Valutazione del Tuo Usato</h2>
-    <form action="submit_form.php" method="POST">
+    <form action="https://formsubmit.co/pinco2642@gmail.com" method="POST">
         <div class="form-group">
             <label for="nome">Nome e Cognome</label>
             <input type="text" id="nome" name="nome" required>
@@ -174,6 +174,9 @@
             <label for="descrizione">Descrizione Aggiuntiva</label>
             <textarea id="descrizione" name="descrizione"></textarea>
         </div>
+
+        <!-- Nasconde il captcha di FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
 
         <button type="submit" class="btn-submit">Invia la Valutazione</button>
     </form>
